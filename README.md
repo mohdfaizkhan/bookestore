@@ -36,6 +36,11 @@ http://localhost:8080/v3/api-docs/
 
 http://localhost:8080/h2-console/
 
+![alt text](https://raw.githubusercontent.com/mohdfaizkhan/bookestore/main/screenshot/1%20Open%20API.png "preview1")
+![alt text](https://raw.githubusercontent.com/mohdfaizkhan/bookestore/main/screenshot/2%20service1.png "preview2")
+![alt text](https://raw.githubusercontent.com/mohdfaizkhan/bookestore/main/screenshot/3%20h2db%20data.png "preview3")
+![alt text](https://raw.githubusercontent.com/mohdfaizkhan/bookestore/main/screenshot/4%20Api%20docs.png "preview4")
+
 ## Environment 
 
 This image uses following commands for configuration.
