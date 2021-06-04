@@ -1,0 +1,15 @@
+version: '2'
+services:
+    bookstore:
+        container_name: bookstore
+        build:
+            context: bookstore
+            dockerfile: Dockerfile
+        image: faizkhan/bookstore:v0.0.1
+        ports:
+            - 8080:8080
+        networks:
+            - spring-cloud-network
+networks:
+    spring-cloud-network:
+        driver: bridge
