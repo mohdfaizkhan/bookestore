@@ -28,9 +28,13 @@ That's it.
 
 ## APIs and Swagger
 http://localhost:8080/api/v1/books
+
 http://localhost:8080/api/v1/book/1
+
 http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+
 http://localhost:8080/v3/api-docs/
+
 http://localhost:8080/h2-console/
 
 ![alt text](https://raw.githubusercontent.com/mohdfaizkhan/bookestore/main/screenshot/1%20Open%20API.png "preview1")
