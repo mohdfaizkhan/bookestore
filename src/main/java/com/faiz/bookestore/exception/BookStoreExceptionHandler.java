@@ -27,6 +27,24 @@ public class BookStoreExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(RequestPayloadException.class)
+    public ResponseEntity<Object> handleRequestPayloadException(
+            RequestPayloadException ex, WebRequest request) {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("message", "provide the correct payload");
+        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(BookAlreadyExistException.class)
+    public ResponseEntity<Object> handleBookAlreadyExistException(
+            BookAlreadyExistException ex, WebRequest request) {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("message", "Same name book already exist");
+        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException ex, HttpHeaders headers,

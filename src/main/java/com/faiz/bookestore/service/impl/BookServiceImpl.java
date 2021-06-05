@@ -10,6 +10,7 @@ import com.faiz.bookestore.model.Book;
 import com.faiz.bookestore.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -79,8 +80,8 @@ public class BookServiceImpl implements BookService {
         return Optional.of(!StringUtils.isEmpty(book.getName()))
                 .filter(Boolean::booleanValue)
                 .map(correctRequest ->
-                        Optional.of(bookDao.findByName(book.getName()))
-                                .filter(data -> data == null)
+                        Optional.ofNullable(null == bookDao.findByName(book.getName()))
+                                .filter(Boolean::booleanValue)
                                 .map(notPresentBook -> bookDao.save(Book.builder()
                                         .name(book.getName())
                                         .description(book.getDescription())
