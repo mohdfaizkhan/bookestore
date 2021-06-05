@@ -15,9 +15,19 @@ Presented By -
 
 # How to use
 
-Simply build the image using `$docker build -t mohdfai/bookstore:latest .`
+Simply build the image using 
 
-and run it with all needed parameter:
+```console
+$docker build -t mohdfai/bookstore:latest .
+```
+
+Or
+
+```console
+$docker-compose up -d
+```
+
+run it with all needed parameter:
 
 ```console
 $ docker pull mohdfai/bookestore:latest
@@ -26,14 +36,14 @@ $ docker run -d -p 8080:8080 mohdfai/bookstore:latest
 
 That's it.
 
-## APIs and Swagger
-http://localhost:8080/api/v1/books
-
-http://localhost:8080/api/v1/book/1
-
+## Open APIs / Swagger
 http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
 http://localhost:8080/v3/api-docs/
+
+http://localhost:8080/api/v1/books
+
+http://localhost:8080/api/v1/book/1
 
 http://localhost:8080/h2-console/
 
@@ -48,8 +58,8 @@ This image uses following commands for configuration.
 
 |docker commands     |Default value        |Description                                         |
 |------------------------|---------------------|----------------------------------------------------|
-|`Docker build`    |no default           |$docker build -t faizkhan/bookstore:v0.0.1 .|
-|`Docker run`    |no default           |docker run -d -p 8888:8888 faizkhan/bookstore:v0.0.1           |
+|`Docker build`    |no default           |$docker build -t mohdfai/bookstore:latest .|
+|`Docker run`    |no default           |docker run -d -p 8080:8080 mohdfai/bookstore:latest           |
 
 
 
@@ -60,7 +70,7 @@ To update your setup simply pull the newest image version from docker hub and ru
 
 ## Deprecated features
 
-Instead of using faizkhan/bookstore:v0.0.1  image, any light image can be used (e.g. openjdk:8-jdk-alpine)
+Instead of using mohdfai/bookstore:latest  image, any light image can be used (e.g. openjdk:8-jdk-alpine)
 
 # License
 
