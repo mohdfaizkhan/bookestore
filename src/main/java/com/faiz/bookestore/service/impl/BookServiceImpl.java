@@ -1,6 +1,7 @@
 package com.faiz.bookestore.service.impl;
 
 import com.faiz.bookestore.dao.BookDao;
+import com.faiz.bookestore.exception.NoDataFoundException;
 import com.faiz.bookestore.model.Book;
 import com.faiz.bookestore.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,9 @@ public class BookServiceImpl implements BookService {
     public List<Book> findAll() {
         List<Book> list = new ArrayList<>();
         bookDao.findAll().iterator().forEachRemaining(list::add);
+        if (list.isEmpty()) {
+            throw new NoDataFoundException();
+        }
         return list;
     }
 
