@@ -8,8 +8,6 @@ public interface BookService {
 
     Book findById(long id);
 
-    List<Book> findByName(String title);
-
     List<Book> findAll();
 
     Book save(Book book);
@@ -17,4 +15,8 @@ public interface BookService {
     void delete(long id);
 
     Book update(Book userDto);
+
+    Double getTotalPrice(List<String> books);
+
+    Double getDiscountedPrice(List<String> books, String promoCode);
 }

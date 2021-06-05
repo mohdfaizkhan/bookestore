@@ -1,0 +1,10 @@
+promocodes:
+  promos:
+    - promoCode: xyz
+      bookType: fiction
+      discount: 10
+      expireDate: 20/07/2021
+    - promoCode: xyz
+      bookType: comic
+      discount: 0
+      expireDate: 20/07/2021
