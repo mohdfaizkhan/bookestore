@@ -22,6 +22,7 @@ target/
 
 ### NetBeans ###
 /nbproject/private/
+/allure-results/
 /nbbuild/
 /dist/
 /nbdist/
