@@ -4,6 +4,7 @@ import com.faiz.bookestore.exception.NoDataFoundException;
 import com.faiz.bookestore.model.Book;
 import com.faiz.bookestore.model.GetTotalPriceReq;
 import com.faiz.bookestore.service.BookService;
+import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,9 +14,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class BookController {
-    @Autowired
-    private BookService bookService;
+    //@Autowired
+    private final BookService bookService;
 
     @RequestMapping(value = "/api/v1/books", method = RequestMethod.GET)
     public @ResponseBody
