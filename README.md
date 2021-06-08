@@ -37,15 +37,19 @@ $ docker run -d -p 8080:8080 mohdfai/bookstore:latest
 That's it.
 
 ## Open APIs / Swagger
-http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+https://faizkhanbookstore.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/
 
-http://localhost:8080/v3/api-docs/
+https://faizkhanbookstore.herokuapp.com/v3/api-docs/
 
-http://localhost:8080/api/v1/books
+https://faizkhanbookstore.herokuapp.com/api/v1/book/getTotalPrice
 
-http://localhost:8080/api/v1/book/1
+https://faizkhanbookstore.herokuapp.com/api/v1/book/getDiscountedTotalPrice
 
-http://localhost:8080/h2-console/
+https://faizkhanbookstore.herokuapp.com/api/v1/books
+
+https://faizkhanbookstore.herokuapp.com/api/v1/book/1
+
+https://faizkhanbookstore.herokuapp.com/h2-console/
 
 ![alt text](https://raw.githubusercontent.com/mohdfaizkhan/bookestore/main/screenshot/1%20Open%20API.png "preview1")
 ![alt text](https://raw.githubusercontent.com/mohdfaizkhan/bookestore/main/screenshot/2%20service1.png "preview2")
